@@ -1,0 +1,29 @@
+@use "./variables.scss" as *;
+
+.glass-frame {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass-content {
+    width: 100%;
+    max-width: 1202px;
+    height: 100%;
+    max-height: 542px;
+    
+    padding: 46px;
+    
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid $white;
+    border-radius: 20px;
+
+    box-shadow: 0 0 50px rgba(152, 131, 187, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    color: $black;
+    overflow-y: auto;
+}

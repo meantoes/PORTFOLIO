@@ -1,0 +1,222 @@
+@use "./variables.scss" as *;
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    scrollbar-width: none;
+    font-family: $normalFont;
+}
+
+.about-me .glass-content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 54px;
+
+    padding: 46px;
+    font-family: $normalFont;
+    scrollbar-width: none;
+}
+
+// EXPERIENCE
+.experiences {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    height: 100%;
+    min-height: 400px;
+
+    background: rgba(255, 255, 255, 0.114);
+    border: 1px solid $white;
+    border-radius: 20px;
+
+    box-shadow: 0 0 50px rgba(152, 131, 187, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.exp {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    border-bottom: 1px solid $black;
+}
+
+.about-me .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $black;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.exp-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+    column-gap: 32px;
+}
+
+.exp .left {
+    width: 57px;
+}
+
+.exp .left img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.exp .info {
+    display: flex;
+    column-gap: 12px;
+}
+
+.exp .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.exp .up {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 24px;
+    font-family: $nameFont;
+    font-weight: 600;
+}
+
+.exp .bottom {
+    font-size: 16px;
+}
+
+.exp-desc {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.year {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+// TOOLS
+.tools-container {
+    display: flex;
+    column-gap: 32px;
+    width: 100%;
+}
+
+.tools {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.114);
+    border: 1px solid $white;
+    border-radius: 20px;
+
+    box-shadow: 0 0 50px rgba(152, 131, 187, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.tools-grid {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: $nameFont;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 12px;
+}
+
+.tool {
+    padding: 10px 0;
+    border-bottom: 1px solid;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+        background-color: rgba(74, 60, 99, 0.67);
+        padding: 10px 10px;
+        color: white;
+    }
+}
+
+.aboutmeBtn {
+    background-color: $black;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 7px;
+    font-family: $nameFont;
+    font-size: 18px;
+    transition: all 0.15s ease-in-out;
+    font-weight: 500;
+
+    &:hover {
+        background-color: white;
+        color: $black;
+        cursor: pointer;
+    }
+}
+
+.aboutme-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    color: $black;
+    text-decoration: none;
+    margin: 0;
+}
+
+// .bio {
+//     background: rgba(255, 255, 255, 0.2);
+//     border: 1px solid $white;
+//     border-radius: 20px;
+
+//     box-shadow: 0 0 50px rgba(152, 131, 187, 0.2);
+//     backdrop-filter: blur(20px);
+//     -webkit-backdrop-filter: blur(20px);
+
+//     display: flex;
+//     column-gap: 32px;
+//     padding: 2rem;
+// }
+
+// .bio-profile {
+//     width: 100%;
+//     max-width: 250px;
+// }
+
+// .bio-profile img {
+//     width: 100%;
+//     object-fit: cover;
+//     border-radius: 15px;
+// }
+
+// .bio-desc {
+//     display: flex;
+//     flex-direction: column;
+//     row-gap: 12px;
+// }
+
+// .about-me h2 {
+//     font-size: 24px;
+//     font-weight: bold;
+// }
+
+// .more-bio {
+//     font-size: 14px;
+//     line-height: 20px;
+// }

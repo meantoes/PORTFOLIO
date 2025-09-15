@@ -1,0 +1,65 @@
+@use "./variables.scss" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $normalFont;
+}
+
+.page .glass-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 24px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 12;
+    font-variation-settings:
+    "wdth" 75;
+}
+
+.intro h1 {
+    font-size: 40px;
+    font-family: $normalFont;
+    font-weight: normal;
+}
+
+.intro p {
+    max-width: 337px;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.nama {
+    font-family: $nameFont;
+    font-size: 48px;
+}
+
+.homeBtn {
+    font-size: 18px;
+    font-family: $nameFont;
+    color: $black;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: .5px solid transparent;
+
+    transition: all .15s ease-in-out;
+}
+
+.homeBtn:hover {
+    color: white;
+    border-bottom: .5px solid white;
+}
+

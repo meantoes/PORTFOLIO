@@ -1,0 +1,78 @@
+@use "./variables.scss" as *;
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconBtn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.back {
+    background: url("../assets/back.png") no-repeat center/contain;
+
+    &:hover {
+        background: url("../assets/back-hover.png") no-repeat center/contain;
+    }
+}
+
+.menu {
+    background: url("../assets/menu.png") no-repeat center/contain;
+
+    &:hover {
+        background: url("../assets/menu-hover.png") no-repeat center/contain;
+    }
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 75px 70px;
+}
+
+.menu-frame {
+  background: rgba(74, 60, 99, 0.67);
+  border-radius:10px;
+  padding: 12px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  backdrop-filter: blur(50px);
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-links a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-family: $nameFont;
+    font-weight: 500;
+    padding: 10px 3rem 15px 3rem;
+    
+
+    transition: all 0.15s ease-in-out;
+    border-radius: 7px;
+}
+
+.menu-links a:hover {
+  color: $black;
+  background-color: rgb(255, 255, 255);
+}
