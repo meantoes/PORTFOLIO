@@ -14,11 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    row-gap: 54px;
-
-    padding: 46px;
-    font-family: $normalFont;
-    scrollbar-width: none;
+    row-gap: 2rem;
 }
 
 // EXPERIENCE
@@ -27,10 +23,10 @@
     flex-direction: column;
     padding: 2rem;
     height: 100%;
-    min-height: 400px;
+    min-height: 23rem;
 
     background: rgba(255, 255, 255, 0.114);
-    border: 1px solid $white;
+    border: 1px solid white;
     border-radius: 20px;
 
     box-shadow: 0 0 50px rgba(152, 131, 187, 0.2);
@@ -39,13 +35,14 @@
 
     overflow-y: auto;
     scrollbar-width: none;
+    scroll-behavior: initial;
 }
 
 .exp {
-    padding: 24px;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    row-gap: 18px;
+    row-gap: 1.125rem;
     border-bottom: 1px solid $black;
 }
 
@@ -61,12 +58,12 @@
 .exp-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 32px;
-    column-gap: 32px;
+    row-gap: 2rem;
+    column-gap: 2rem;
 }
 
 .exp .left {
-    width: 57px;
+    width: 5rem;
 }
 
 .exp .left img {
@@ -76,7 +73,7 @@
 
 .exp .info {
     display: flex;
-    column-gap: 12px;
+    column-gap: .75rem;
 }
 
 .exp .right {
@@ -100,19 +97,19 @@
 }
 
 .exp-desc {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: .875rem;
+    line-height: 1.5rem;
 }
 
 .year {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
 }
 
 // TOOLS
 .tools-container {
     display: flex;
-    column-gap: 32px;
+    column-gap: 2rem;
     width: 100%;
 }
 
@@ -123,7 +120,7 @@
     width: 100%;
 
     background: rgba(255, 255, 255, 0.114);
-    border: 1px solid $white;
+    border: 1px solid white;
     border-radius: 20px;
 
     box-shadow: 0 0 50px rgba(152, 131, 187, 0.2);
@@ -132,13 +129,13 @@
 }
 
 .tools-grid {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     font-family: $nameFont;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 12px;
+    column-gap: 0.75rem;
 }
 
 .tool {
@@ -153,15 +150,12 @@
     }
 }
 
-.aboutmeBtn {
+.aboutme-btn .btn {
     background-color: $black;
     color: white;
     border: none;
-    padding: 1rem 3rem;
+    padding: .7rem 3rem;
     border-radius: 7px;
-    font-family: $nameFont;
-    font-size: 18px;
-    transition: all 0.15s ease-in-out;
     font-weight: 500;
 
     &:hover {
@@ -182,7 +176,7 @@
 
 // .bio {
 //     background: rgba(255, 255, 255, 0.2);
-//     border: 1px solid $white;
+//     border: 1px solid white;
 //     border-radius: 20px;
 
 //     box-shadow: 0 0 50px rgba(152, 131, 187, 0.2);

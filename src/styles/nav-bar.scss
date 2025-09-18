@@ -7,8 +7,8 @@
 }
 
 .iconBtn {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     border: none;
     cursor: pointer;
     transition: all 0.15s ease-in-out;
@@ -38,13 +38,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 75px 70px;
+  padding: 5rem 4.5rem;
 }
 
 .menu-frame {
   background: rgba(74, 60, 99, 0.67);
   border-radius:10px;
-  padding: 12px 24px;
+  padding: .75rem 1.5rem;
 
   display: flex;
   flex-direction: column;
@@ -60,12 +60,12 @@
 }
 
 .menu-links a {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: white;
     text-decoration: none;
     font-family: $nameFont;
     font-weight: 500;
-    padding: 10px 3rem 15px 3rem;
+    padding: .5rem 3rem .7rem 3rem;
     
 
     transition: all 0.15s ease-in-out;

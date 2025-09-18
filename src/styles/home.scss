@@ -8,8 +8,9 @@
 body {
     background-image: url(../assets/background.png);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    font-family: $normalFont;
+    min-height: 100vh;
 }
 
 .page .glass-content {

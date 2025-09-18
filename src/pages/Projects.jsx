@@ -37,10 +37,10 @@ function ProjectModal({ project, onClose }) {
     return (
     <div className="overlay" onClick={onClose}>
         <div className="modal-frame" onClick={(e) => e.stopPropagation()}>
-            {/* <div className="modal-text">
+            <div className="modal-text">
                 <h2>{project.companyName}</h2>
                 <p>{project.role}</p>
-            </div> */}
+            </div>
             {project.image && <img src={project.image} alt={project.companyName} />}
         </div>
     </div>
@@ -52,6 +52,11 @@ function Projects() {
     const [hoveredImage, setHoveredImage] = useState(null);
 
     const projects = [
+        {
+        companyName: "Solo project",
+        role: "UI Designer",
+        image: pr7,
+        },
         {
         companyName: "Indonesia Mengajar",
         role: "Graphic Designer",
@@ -82,11 +87,6 @@ function Projects() {
         role: "Web Developer",
         image: pr6,
         },
-        {
-        companyName: "Solo",
-        role: "Graphic Designer",
-        image: pr7,
-        },
     ];
     
     return (
@@ -97,7 +97,7 @@ function Projects() {
                 <div className="contents">
                     <div className="content-left">
                         <div className="content-up">
-                            <div className="header-project">
+                            <div className="header-project header">
                                 <h2>Projects</h2>
                                 <h2>7</h2>
                             </div>
@@ -115,7 +115,7 @@ function Projects() {
                         </div>
 
                         <div className="content-bottom">
-                            <div className="projectBtn"><Link className="homeBtn" to="/aboutMe">about me</Link></div>
+                            <div className="projectBtn"><Link className="btn" to="/aboutMe">about me</Link></div>
                         </div>
                     </div>
 
@@ -123,15 +123,15 @@ function Projects() {
                         <AnimatePresence mode="wait">
                             {hoveredImage ? (
                             <motion.img
-                                key={hoveredImage} // re-trigger animation when the image changes
-                                className="hover-preview preview-img"
+                                key={hoveredImage}
+                                className="preview-img"
                                 src={hoveredImage}
                                 alt="preview"
                                 initial={{ opacity: 1, filter: "grayscale(100%)", scale: 1.05 }}
                                 animate={{ opacity: 1, filter: "grayscale(0%)", scale: 1 }}
                                 exit={{ opacity: 1, filter: "grayscale(100%)", scale: 1 }}
                                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                                style={{ borderRadius: "20px"}}                    
+                                style={{ borderRadius: "20px"}}
                             />
                             ) : (
                             <motion.p
