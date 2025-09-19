@@ -21,7 +21,10 @@ function Experience({experience}) {
                         <div className="company-name">{experience.company}</div>
                         <div className="year">{experience.year}</div>
                     </div>
-                    <div className="bottom">{experience.role}</div>
+                    <div className="bottom">
+                        <div className="bottom">{experience.role}</div>
+                        <div className="year-mobile">{experience.year}</div>
+                    </div>
                 </div>
             </div>
             <div className="exp-desc">{ experience.desc }</div>
@@ -99,13 +102,16 @@ function AboutMe() {
                                 <div className="tool skill">Java</div>
                                 <div className="tool skill">JavaScript</div>
                                 <div className="tool skill">React</div>
+                                <div className="tool skill-mobile">PHP</div>
+
                             </div>
 
                             <div className="middle">
-                                <div className="tool skill">Saas</div>
+                                <div className="tool skill">Sass</div>
                                 <div className="tool skill">Tailwind</div>
                                 <div className="tool skill">Bootstrap</div>
                                 <div className="tool skill">MySql</div>
+                                <div className="tool skill-mobile">Laravel</div>
                             </div>
 
                             <div className="end">

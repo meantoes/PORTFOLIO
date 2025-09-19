@@ -39,7 +39,7 @@
 }
 
 .exp {
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     display: flex;
     flex-direction: column;
     row-gap: 1.125rem;
@@ -58,7 +58,6 @@
 .exp-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 2rem;
     column-gap: 2rem;
 }
 
@@ -86,6 +85,7 @@
 .exp .up {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     font-size: 24px;
     font-family: $nameFont;
@@ -99,11 +99,20 @@
 .exp-desc {
     font-size: .875rem;
     line-height: 1.5rem;
+
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 7px;
 }
 
 .year {
     font-size: 1.125rem;
     font-weight: 500;
+    text-align: right;
+}
+
+.company-name {
+    text-align: left;
 }
 
 // TOOLS
@@ -118,6 +127,7 @@
     flex-direction: column;
     padding: 2rem;
     width: 100%;
+    box-sizing: border-box;
 
     background: rgba(255, 255, 255, 0.114);
     border: 1px solid white;
@@ -174,6 +184,10 @@
     margin: 0;
 }
 
+.year-mobile {
+    display: none;
+}
+
 // .bio {
 //     background: rgba(255, 255, 255, 0.2);
 //     border: 1px solid white;
@@ -214,3 +228,76 @@
 //     font-size: 14px;
 //     line-height: 20px;
 // }
+
+@media (max-width: 768px) {
+    .exp-info {
+        grid-template-columns: 1fr;
+    }
+
+    .tool {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: 480px) {
+    .tools {
+        padding: 2rem;
+    }
+
+    .company-name {
+        font-size: 1.75rem;
+        margin-bottom: -5px;
+    }
+
+    img {
+        display: block;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .up {
+        flex-direction: column;
+    }
+
+    .exp {
+        padding: 1rem 0;
+    }
+
+    .exp .bottom {
+        font-size: .5rem;
+    }
+
+    .year {
+        display: none;
+    }
+
+    .exp .right {
+        justify-content: space-around;
+    }
+
+    .skill-mobile {
+        display: block;
+    }
+
+    .skills .end {
+        display: none;
+    }
+}
+
+@media (min-width: 481px) {
+    .skill-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 730px) {
+    .tools-container {
+        flex-direction: column;
+        row-gap: 2rem;
+        width: 100%;
+    }
+}

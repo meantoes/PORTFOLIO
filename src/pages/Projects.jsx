@@ -21,7 +21,7 @@ function ListofProject({ project, onClick, onHover }) {
         onMouseEnter={() => onHover(project.image)}
         onMouseLeave={() => onHover(null)}
     >
-        <div className="role">{project.role}</div>
+        <div className="role p-role">{project.role}</div>
         <div className="company-name">
             <Link className="reviewBtn" to="#">
                 {project.companyName}
@@ -39,7 +39,6 @@ function ProjectModal({ project, onClose }) {
         <div className="modal-frame" onClick={(e) => e.stopPropagation()}>
             <div className="modal-text">
                 <h2>{project.companyName}</h2>
-                <p>{project.role}</p>
             </div>
             {project.image && <img src={project.image} alt={project.companyName} />}
         </div>
@@ -146,6 +145,10 @@ function Projects() {
                             </motion.p>
                             )}
                         </AnimatePresence>
+                    </div>
+
+                    <div className="content-bottom">
+                        <div className="projectBtn-mobile"><Link className="btn" to="/aboutMe">about me</Link></div>
                     </div>
                 </div>
             </GlassFrame>
