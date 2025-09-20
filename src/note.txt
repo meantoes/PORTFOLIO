@@ -3,3 +3,10 @@ i should've built it responsiveeeeeeeeeeeeeeeeeee
 now i need to make it over againnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 what should i do?
 let's hope for the best, let's grind!!
+
+solution found:
+1. i changed all the fixed unit to responsive one (px to rem)
+2. i change the px for height and width to vw vh (for glassframe) and % (for divs)
+3. made media queries for ipad and mobile using commonly used screen sizes for both device
+
+i also use webp for project iamges instead of jpg or png
