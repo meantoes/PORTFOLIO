@@ -6,7 +6,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import pr1 from "../assets/images/ui kpdmi.webp";
-import pr2 from "../assets/images/PM.webp";
+import pr2 from "../assets/images/pm.webp";
 import pr3 from "../assets/images/identitas.webp";
 import pr4 from "../assets/images/ukmf.webp";
 import pr5 from "../assets/images/fg.webp";
