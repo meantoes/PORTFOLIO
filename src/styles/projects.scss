@@ -69,7 +69,9 @@
 
 .company-name {
     text-align: right;
+    align-items: center;
 }
+
 .role {
     font-family: $normalFont;
     font-size: .75rem;
@@ -129,6 +131,13 @@
 
     scrollbar-width: none;
     scroll-behavior: smooth;
+}
+
+.modal-text .exp-desc {
+    color: $black;
+    font-family: $normalFont;
+    font-size: 1rem;
+    background: none;
 }
 
 .modal-frame img {

@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-import pr1 from "../assets/images/1.jpg";
-import pr2 from "../assets/images/2.jpg";
-import pr3 from "../assets/images/3.jpg";
-import pr4 from "../assets/images/4.jpg";
-import pr5 from "../assets/images/5.jpg";
-import pr6 from "../assets/images/6.jpg";
-import pr7 from "../assets/images/ui kpdmi.jpg";
+import pr1 from "../assets/images/ui kpdmi.webp";
+import pr2 from "../assets/images/PM.webp";
+import pr3 from "../assets/images/identitas.webp";
+import pr4 from "../assets/images/ukmf.webp";
+import pr5 from "../assets/images/fg.webp";
+import pr6 from "../assets/images/ui kpdmi.webp";
 
 function ListofProject({ project, onClick, onHover }) {
     return (
@@ -39,6 +38,7 @@ function ProjectModal({ project, onClose }) {
         <div className="modal-frame" onClick={(e) => e.stopPropagation()}>
             <div className="modal-text">
                 <h2>{project.companyName}</h2>
+                <p className="exp-desc">{project.expDesc}</p>
             </div>
             {project.image && <img src={project.image} alt={project.companyName} />}
         </div>
@@ -54,32 +54,37 @@ function Projects() {
         {
         companyName: "Solo project",
         role: "UI Designer",
-        image: pr7,
+        image: pr1,
+        expDesc: "The leader of the photography club and I developed the visual identity for UKM Fotografi Unhas’ Instagram feed. We agreed on a unified color scheme, and I created templates for each content type to streamline the workflow.",
         },
         {
         companyName: "Indonesia Mengajar",
         role: "Graphic Designer",
-        image: pr1,
+        image: pr2,
+        expDesc: "This feed was designed using Canva, which is Indonesia Mengajar’s primary design platform. I followed the design style of previous templates and gradually adapted it to reflect my own style over time."
         },
         {
         companyName: "PK Identitas Unhas",
         role: "Journalist and Graphic Designer",
-        image: pr2,
+        image: pr3,
+        expDesc: "At Identitas, design depends on each designer’s creativity. I used Figma as my primary tool, exploring various elements to complement the layout, and utilizing plugins for illustrations."
         },
         {
         companyName: "UKM Fotografi Unhas",
         role: "Graphic Designer",
-        image: pr3,
+        image: pr4,
+        expDesc: "The leader of the photography club and I developed the visual identity for UKM Fotografi Unhas’ Instagram feed. We agreed on a unified color scheme, and I created templates for each content type to streamline the workflow."
         },
         {
         companyName: "Forbes Games 2023",
         role: "Graphic Designer",
-        image: pr4,
+        image: pr5,
+        expDesc: "Forbes Games 2023 was my first organizational experience, where I also challenged myself to take on a leadership role. I was responsible for designing the Instagram feed, and although the results were not perfect, I am grateful for the opportunity and the valuable experience it gave me."
         },
         {
         companyName: "KPDM",
         role: "UI Design",
-        image: pr5,
+        image: pr6,
         },
         {
         companyName: "UKM Fotografi Unhas",
@@ -170,9 +175,14 @@ function Projects() {
                             exit={{ scale: 0.9, opacity: 0 }}
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                             onClick={(e) => e.stopPropagation()}
-                        >
+                            >
+                            <div className="modal-text">
+                                <h2>{selectedProject.companyName}</h2>
+                                {selectedProject.expDesc && <p className="exp-desc">{selectedProject.expDesc}</p>}
+                            </div>
+
                             {selectedProject.image && (
-                            <motion.img
+                                <motion.img
                                 key={selectedProject.image}
                                 src={selectedProject.image}
                                 alt={selectedProject.companyName}
@@ -180,9 +190,10 @@ function Projects() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: 70 }}
                                 transition={{ duration: 0.4 }}
-                            />
+                                />
                             )}
                         </motion.div>
+
                     </motion.div>
                 )}
             </AnimatePresence>
