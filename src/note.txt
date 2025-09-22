@@ -45,3 +45,8 @@ any what i learned from this was
 - that woff2 is the best format for web
 
 8pm the next day.
+- font issue solved (path was wrong fonts intead of Fonts bye) (be careful while using advanced option on firefox fonts settings cause it disabled all fonts on the website (all) and only use their default fonts)
+- ok next time let's define the fonts variables (from the design system) in one place so if i wanna change the value of each properties it would be easier for me.
+- font size issue fixed.
+- now icon. done using clamp hehe
+- im still not sure about the scrollbar, it's not yet perfect but that's it for tonight ig (1.39am 9/23/2025)

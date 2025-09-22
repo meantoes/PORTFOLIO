@@ -21,7 +21,7 @@
 .experiences {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem 1.5rem;
     height: 100%;
     min-height: 23rem;
 
@@ -34,8 +34,25 @@
     -webkit-backdrop-filter: blur(20px);
 
     overflow-y: auto;
-    scrollbar-width: none;
-    scroll-behavior: initial;
+    scrollbar-width: thin;
+    scrollbar-color: $black transparent;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: thin;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 20px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 10px;
+        border: none;
+    }
 }
 
 .exp {
@@ -62,7 +79,7 @@
 }
 
 .exp .left {
-    width: 5rem;
+    width: clamp(3rem, 2vw + 2rem, 5rem);
 }
 
 .exp .left img {
@@ -78,7 +95,7 @@
 .exp .right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
 }
 
@@ -87,17 +104,17 @@
     justify-content: space-between;
     align-items: center;
 
-    font-size: 24px;
+    font-size: $header;
     font-family: $nameFont;
     font-weight: 600;
 }
 
 .exp .bottom {
-    font-size: 16px;
+    font-size: $small;
 }
 
 .exp-desc {
-    font-size: .875rem;
+    font-size: $small;
     line-height: 1.5rem;
 
     padding: 1rem;
@@ -106,7 +123,7 @@
 }
 
 .year {
-    font-size: 1.125rem;
+    font-size: $subhead;
     font-weight: 500;
     text-align: right;
 }
@@ -125,7 +142,7 @@
 .tools {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem 1.5rem;
     width: 100%;
     box-sizing: border-box;
 
@@ -139,7 +156,7 @@
 }
 
 .tools-grid {
-    font-size: 1.125rem;
+    font-size: $subhead;
     font-weight: 500;
     font-family: $nameFont;
 
@@ -229,7 +246,7 @@
 //     line-height: 20px;
 // }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .exp-info {
         grid-template-columns: 1fr;
     }
@@ -241,14 +258,14 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
     .tools {
-        padding: 2rem;
+        padding: 1rem;
     }
 
     .company-name {
-        font-size: 1.75rem;
         margin-bottom: -5px;
+        text-align: left;
     }
 
     img {
@@ -267,16 +284,13 @@
         padding: 1rem 0;
     }
 
-    .exp .bottom {
-        font-size: .5rem;
-    }
-
     .year {
         display: none;
     }
 
     .exp .right {
-        justify-content: space-around;
+        align-items: start;
+        justify-content: center;
     }
 
     .skill-mobile {
@@ -288,13 +302,13 @@
     }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 768px) {
     .skill-mobile {
         display: none;
     }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 1023px) {
     .tools-container {
         flex-direction: column;
         row-gap: 2rem;
