@@ -30,7 +30,8 @@ function ListofProject({ project, onClick, onHover }) {
     );
 }
 
-function ProjectModal({ project, onClose }) {
+// ONCLOSE TO CLOSE THE MODAL
+function ProjectModal({ project, onClose, onNext }) {
     if (!project) return null;
 
     return (
@@ -41,15 +42,16 @@ function ProjectModal({ project, onClose }) {
                 <p className="exp-desc">{project.expDesc}</p>
             </div>
             {project.image && <img src={project.image} alt={project.companyName} />}
+            <div className="buttons-modal">
+                <button className="btn" onClick={onClose}>{"< back to Projects"}</button>
+                <div className="projectBtn-modal"><button className="btn" onClick={onNext}>{"next project >"}</button></div>
+            </div>
         </div>
     </div>
   );
 }
 
 function Projects() {
-    const [selectedProject, setSelectedProject] = useState(null);
-    const [hoveredImage, setHoveredImage] = useState(null);
-
     const projects = [
         {
         companyName: "Solo project",
@@ -92,6 +94,16 @@ function Projects() {
         image: pr6,
         },
     ];
+
+    const [selectedIndex, setSelectedIndex] = useState(null);
+    const selectedProject = selectedIndex !== null ? projects[selectedIndex] : null;
+    const [hoveredImage, setHoveredImage] = useState(null);
+
+    const nextProject = () => {
+        if (selectedIndex !== null) {
+            setSelectedIndex((prev) => (prev + 1) % projects.length);
+        }
+    };
     
     return (
         <div className="projectsPage">
@@ -111,7 +123,7 @@ function Projects() {
                                     <ListofProject
                                     key={idx}
                                     project={p}
-                                    onClick={(proj) => setSelectedProject(proj)}
+                                    onClick={() => setSelectedIndex(idx)}
                                     onHover={(img) => setHoveredImage(img)}
                                     />
                                 ))}
@@ -119,7 +131,7 @@ function Projects() {
                         </div>
 
                         <div className="content-bottom">
-                            <div className="projectBtn"><Link className="btn" to="/aboutMe">about me</Link></div>
+                            <div className="projectBtn"><Link className="btn" to="/aboutMe">{"about me >"}</Link></div>
                         </div>
                     </div>
 
@@ -153,7 +165,7 @@ function Projects() {
                     </div>
 
                     <div className="content-bottom">
-                        <div className="projectBtn-mobile"><Link className="btn" to="/aboutMe">about me</Link></div>
+                        <div className="projectBtn-mobile"><Link className="btn" to="/aboutMe">{"about me >"}</Link></div>
                     </div>
                 </div>
             </GlassFrame>
@@ -161,39 +173,16 @@ function Projects() {
             <AnimatePresence>
                 {selectedProject && (
                     <motion.div
-                        className="overlay"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        onClick={() => setSelectedProject(null)}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
                     >
-                        <motion.div
-                            className="modal-frame"
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
-                            transition={{ duration: 0.4, ease: "easeInOut" }}
-                            onClick={(e) => e.stopPropagation()}
-                            >
-                            <div className="modal-text">
-                                <h2>{selectedProject.companyName}</h2>
-                                {selectedProject.expDesc && <p className="exp-desc">{selectedProject.expDesc}</p>}
-                            </div>
-
-                            {selectedProject.image && (
-                                <motion.img
-                                key={selectedProject.image}
-                                src={selectedProject.image}
-                                alt={selectedProject.companyName}
-                                initial={{ opacity: 0, y: 70 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 70 }}
-                                transition={{ duration: 0.4 }}
-                                />
-                            )}
-                        </motion.div>
-
+                    <ProjectModal
+                    project={selectedProject}
+                    onClose={() => setSelectedIndex(null)}
+                    onNext={nextProject}
+                    />
                     </motion.div>
                 )}
             </AnimatePresence>

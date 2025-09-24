@@ -50,3 +50,9 @@ any what i learned from this was
 - font size issue fixed.
 - now icon. done using clamp hehe
 - im still not sure about the scrollbar, it's not yet perfect but that's it for tonight ig (1.39am 9/23/2025)
+
+11.50pm (23/09)
+- gonna add back button for every pages that need it. 
+- remove scrollbar in mobile view > done
+- BRO I DIDNT KNOW, i have function ProjectModal which content the modal divs and inline modal on jsx file. i thought they work together but turns out im just writing it twice. thanks gpt for give me some lights for the truth hahahaahhaahahahaha
+brb i have a class in the morning (1.39am 09/24)

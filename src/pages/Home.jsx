@@ -11,7 +11,7 @@ function Home() {
           <p>I’m a Computer Science student, a graphic designer, UI/UX designer, and a full-stack web developer</p>
         </div>
 
-        <div className="btn"><Link className="btn" to="/projects">see my projects</Link></div>
+        <div className="btn"><Link className="btn" to="/projects">{"see my projects >"}</Link></div>
       </GlassFrame>
     </div>
   );
