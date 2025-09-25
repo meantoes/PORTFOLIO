@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRef, useEffect } from "react";
 
 import pr1 from "../assets/images/ui kpdmi.webp";
 import pr2 from "../assets/images/pm.webp";
@@ -32,11 +33,17 @@ function ListofProject({ project, onClick, onHover }) {
 
 // ONCLOSE TO CLOSE THE MODAL
 function ProjectModal({ project, onClose, onNext }) {
-    if (!project) return null;
+    const modalRef = useRef(null);
+    useEffect(() => {
+        if (modalRef.current) {
+        modalRef.current.scrollTo({ top: 0, behavior: "auto" }); // or "smooth"
+        }
+    }, [project]);
 
+    if (!project) return null;
     return (
     <div className="overlay" onClick={onClose}>
-        <div className="modal-frame" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-frame" ref={modalRef} onClick={(e) => e.stopPropagation()}>
             <div className="modal-text">
                 <h2>{project.companyName}</h2>
                 <p className="exp-desc">{project.expDesc}</p>
@@ -44,7 +51,7 @@ function ProjectModal({ project, onClose, onNext }) {
             {project.image && <img src={project.image} alt={project.companyName} />}
             <div className="buttons-modal">
                 <button className="btn" onClick={onClose}>{"< back to Projects"}</button>
-                <div className="projectBtn-modal"><button className="btn" onClick={onNext}>{"next project >"}</button></div>
+                <button className="btn" onClick={onNext}>{"next project >"}</button>
             </div>
         </div>
     </div>

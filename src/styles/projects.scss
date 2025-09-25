@@ -170,6 +170,18 @@
     padding-top: 1rem;
 }
 
+.buttons-modal button {
+    padding-bottom: .5rem;
+    background: none;
+    border: none;
+    color: $black;
+    border-bottom: 1px solid $black;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 // IPAD
 @media (max-width: 1023px) {
     .contents {

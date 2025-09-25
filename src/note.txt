@@ -40,7 +40,7 @@ this was my first time deploy a react project btw
 NOW at 3.54 am
 i tried to fix the font issue. the problem was i didnt make / define them in a font file
 so that the font can load first before the scss.
-any what i learned from this was
+and what i learned from this was
 - to define the fonts when we build a project and
 - that woff2 is the best format for web
 
