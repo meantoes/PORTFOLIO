@@ -48,6 +48,11 @@ body {
     font-size: clamp(1.75rem, 1vw + 1rem, 2.5rem);
 }
 
+.point {
+    font-family: $nameFont;
+    font-size: clamp(0.975rem, 0.6vw + 1rem, 1.3rem);
+}
+
 .homeBtn {
     font-size: $small;
     font-family: $nameFont;

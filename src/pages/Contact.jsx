@@ -15,7 +15,7 @@ function Contact() {
                             <div className="kontak value">yeitzmee@gmail.com</div>
                         </div>
                         <div className="contact kontak-dua">
-                            <div className="kontak type">WhatsApp</div>
+                            <div className="kontak type"><a href="mailto:yeitzmee@gmail.com">WhatsApp</a></div>
                             <div className="kontak value"><a href="https://wa.link/n24nnv">+62 896 3638 7440</a></div>
                         </div>
                     </div>

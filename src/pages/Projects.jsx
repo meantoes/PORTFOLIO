@@ -6,12 +6,13 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRef, useEffect } from "react";
 
-import pr1 from "../assets/images/ui kpdmi.webp";
+import pr1 from "../assets/images/ui kpdm.webp";
 import pr2 from "../assets/images/pm.webp";
 import pr3 from "../assets/images/identitas.webp";
 import pr4 from "../assets/images/ukmf.webp";
 import pr5 from "../assets/images/fg.webp";
-import pr6 from "../assets/images/ui kpdmi.webp";
+import pr6 from "../assets/images/temuskill.webp";
+import pr7 from "../assets/images/kj.webp";
 
 function ListofProject({ project, onClick, onHover }) {
     return (
@@ -64,7 +65,13 @@ function Projects() {
         companyName: "Solo project",
         role: "UI Designer",
         image: pr1,
-        expDesc: "The leader of the photography club and I developed the visual identity for UKM Fotografi Unhas’ Instagram feed. We agreed on a unified color scheme, and I created templates for each content type to streamline the workflow.",
+        expDesc: "I redesigned the website of Kementerian Pendidikan Dasar dan Menengah Indonesia with a focus on solving real UX problems rather than just making it look visually appealing. I started by identifying key issues such as inconsistent design, poor readability, unnecessary features, and elements that could confuse users. Then I worked on solutions to make the design clearer, more consistent, and easier to use.",
+        },
+        {
+        companyName: "Class project",
+        role: "Frontend Developer",
+        image: pr6,
+        expDesc: "I collaborated with a team to develop TemuSkill, a platform designedto connect service seekers with service providers. My primary responsibility was to implement the frontend using Java, ensuring a responsive interface. I worked closely with the design team to translate UI/UX designs into functional components, focusing on seamless navigation and an engaging user experience",
         },
         {
         companyName: "Indonesia Mengajar",
@@ -73,8 +80,14 @@ function Projects() {
         expDesc: "This feed was designed using Canva, which is Indonesia Mengajar’s primary design platform. I followed the design style of previous templates and gradually adapted it to reflect my own style over time."
         },
         {
+        companyName: "Kelana Jiwa",
+        role: "Graphic Designer",
+        image: pr7,
+        expDesc: "In Kelana Jiwa, the design is adapted to the creativity of graphic designers while still adhering to Kelana Jiwa’s brand identity"
+        },
+        {
         companyName: "PK Identitas Unhas",
-        role: "Journalist and Graphic Designer",
+        role: "Graphic Designer",
         image: pr3,
         expDesc: "At Identitas, design depends on each designer’s creativity. I used Figma as my primary tool, exploring various elements to complement the layout, and utilizing plugins for illustrations."
         },
@@ -83,22 +96,6 @@ function Projects() {
         role: "Graphic Designer",
         image: pr4,
         expDesc: "The leader of the photography club and I developed the visual identity for UKM Fotografi Unhas’ Instagram feed. We agreed on a unified color scheme, and I created templates for each content type to streamline the workflow."
-        },
-        {
-        companyName: "Forbes Games 2023",
-        role: "Graphic Designer",
-        image: pr5,
-        expDesc: "Forbes Games 2023 was my first organizational experience, where I also challenged myself to take on a leadership role. I was responsible for designing the Instagram feed, and although the results were not perfect, I am grateful for the opportunity and the valuable experience it gave me."
-        },
-        {
-        companyName: "KPDM",
-        role: "UI Design",
-        image: pr6,
-        },
-        {
-        companyName: "UKM Fotografi Unhas",
-        role: "Web Developer",
-        image: pr6,
         },
     ];
 
@@ -122,7 +119,7 @@ function Projects() {
                         <div className="content-up">
                             <div className="header-project header">
                                 <h2>Projects</h2>
-                                <h2>7</h2>
+                                <h2>6</h2>
                             </div>
 
                             <div className="list-project">
